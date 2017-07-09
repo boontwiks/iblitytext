@@ -27,6 +27,10 @@ handlebars.registerHelper('if_even', (conditional, options) => {
 	if ((conditional % 2) == 0) return options.fn(this)
 	else return options.inverse(this)
 })
+handlebars.registerHelper('if_odd', (conditional, options) => {
+	if ((conditional % 2) != 0) return options.fn(this)
+	else return options.inverse(this)
+})
 
 // Templates
 var template_home;

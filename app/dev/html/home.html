@@ -32,18 +32,44 @@
 				<span class="h1">Why should I contribute?</span><br>
 				{{content.whycontribute}}<br>
 				<div id="body--light--whycontribute-reasons">
-					{{#each content.whycontribute--benefits}}
-					<!-- There is a better way to do the following inside the class name. I can't figure it out though. -->
-					{{#if_even @index}} <div class="left">
-						{{else}} <div class="right"> {{/if_even}}
-							<span class="h2">{{this.[0]}}</span><br>
-							{{this.[1]}}
-						</div>
+					<table style="width: 100%">
+						{{#each content.whycontribute--benefits}}
+							{{#if_even @index}}
+							<tr>
+							{{/if_even}}
+							<td>
+								<span class="h2">{{this.[0]}}</span><br>
+								{{{this.[1]}}}
+							</td>
+							{{#if_odd @index}}
+							</tr>
+							{{/if_odd}}
 						{{/each}}
-					</div>
+					</table>
 				</div>
 				<!-- TODO: FAQ -->
+				<div style="clear: both;"></div>
+				<br>
+				<div id="body--light--faq">
+					<span class="h1">Frequently asked Questions</span><br>
+					<div style="height: 14pt"></div>
+					<table style="width: 100%">
+						{{#each content.faq}}
+						{{#if_even @index}}
+						<tr>
+						{{/if_even}}
+						<td>
+							<span class="h2">{{this.[0]}}</span><br>
+							<span class="h3">{{this.[1]}}</span><br>
+							{{{this.[2]}}}
+						</td>
+						{{#if_odd @index}}
+						</tr>
+						{{/if_odd}}
+						{{/each}}
+					</table>
+				</div>
 			</div>
-
+		</div>
 	</body>
 </html>
