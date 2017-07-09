@@ -29,7 +29,18 @@
 			<div id="body--light" class="c-white">
 				<span>{{content.versionstatement}}</span>
 				<br><br>
-				<span class="h1">Why should I contribute?</span>
+				<span class="h1">Why should I contribute?</span><br>
+				{{content.whycontribute}}<br>
+				<div id="body--light--whycontribute-reasons">
+				{{#each content.whycontribute--benefits}}
+				<!-- There is a better way to do the following inside the class name. I can't figure it out though. -->
+				{{#if_even @index}} <div class="left">
+				{{else}} <div class="right"> {{/if_even}}
+					<span class="h2">{{this.[0]}}</span><br>
+					{{this.[1]}}
+				</div>
+				{{/each}}
+				</div>
 				<!-- TODO: Sliding text: get feedback; improve your writing; learn together; earn CAS -->
 			</div>
 			<!-- TODO: FAQ -->

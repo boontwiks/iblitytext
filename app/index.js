@@ -19,11 +19,19 @@ const sass = require('node-sass')
 const handlebars = require('handlebars')
 const readline = require('readline');
 
-// Load-Time Constants and Templates
-var template_home;
+// Load-Time Constants
 var content_home;
+
+// Handlebars helpers
+handlebars.registerHelper('if_even', (conditional, options) => {
+	if ((conditional % 2) == 0) return options.fn(this)
+	else return options.inverse(this)
+})
+
+// Templates
+var template_home;
 function compile_handlebars() {
-	content_home = require(path.join(__dirname, 'dev/contents/home.json'))
+	content_home = eval('(' + fs.readFileSync(path.join(__dirname, 'dev/contents/home.json')).toString() + ')') // we can use eval because contents are server-side and should be safe.
 	template_home = handlebars.compile(fs.readFileSync(path.join(__dirname, 'dev/html/home.html')).toString())
 }
 
