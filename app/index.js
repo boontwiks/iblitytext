@@ -21,8 +21,10 @@ const readline = require('readline');
 
 // Load-Time Constants and Templates
 var template_home;
+var content_home;
 function compile_handlebars() {
-	template_home = handlebars.compile(fs.readFileSync(path.join(__dirname, 'templates/home.html')).toString())
+	content_home = require(path.join(__dirname, 'dev/contents/home.json'))
+	template_home = handlebars.compile(fs.readFileSync(path.join(__dirname, 'dev/html/home.html')).toString())
 }
 
 function compile_sass() {
@@ -45,7 +47,7 @@ compile_sass()
 
 // Application
 app.get('/', (req, res) => {
-	var data = {'page': _globals.pages.general}
+	var data = {'page': _globals.pages.general, 'content': content_home}
 	res.send(template_home(data))
 })
 

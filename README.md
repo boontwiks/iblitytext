@@ -2,7 +2,7 @@
 A completely free, open, and community-driven textbook for the IB, accessible to anyone on the internet.
 
 ## Contributing
-If you want to contribute, please feel free to get in touch with us over at [reddit.com/r/iblitytext](https://www.reddit.com/r/iblitytext).
+If you want to contribute, please feel free to get in touch with us over at [reddit.com/r/iblitytext](https://www.reddit.com/r/iblitytext) or send a pull request.
 
 ## How to clone
 Prequisites:
