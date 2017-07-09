@@ -1,0 +1,96 @@
+$header-height: 55px
+$color-light: #4f7dc1
+$color-dark: #2a4670
+$body-dark-height: 40vh
+
+html
+  font-family: 'Open Sans', sans-serif
+
+html, body, header
+  padding: 0
+  margin: 0
+
+html, body
+  width: 100%
+html
+  height: 100%
+body
+  height: 90% // lame way to prevent unnecessary overflow
+
+h1, .h1
+  font-family: 'Merriweather', serif
+  font-size: 20pt
+
+h2, .h2
+  font-size: 24pt
+
+.c-light
+  background-color: $color-light
+  color: white
+
+.c-dark
+  background-color: $color-dark
+  color: white
+
+.c-white
+  background-color: white
+  color: #020204
+
+#header
+  padding: 5px
+  border-style: none none solid none
+  border-color: #acb0c4
+  border-width: 1px
+  box-shadow: 0 5px 10px 0px
+  z-index: 1
+
+#header--logo
+  width: $header-height
+  height: $header-height
+  vertical-align: middle
+
+#header--title
+  vertical-align: middle
+  margin-left: 10px
+
+#body // this is NOT the html body
+  height: 100%
+  width: 100%
+
+#body--dark
+  height: $body-dark-height
+  display: inline-block
+  width: 100%
+  position: relative
+
+#body--dark--about
+  vertical-align: center
+  text-align: center
+  padding: 20px
+  margin-top: 10vh
+
+// FIXME: This is not working at all.
+.sliding-text
+    transition: all .5s ease-in-out
+
+#body--dark--about--span-middle
+  color: #ffb7b7
+
+.biglink
+  cursor: pointer
+  font-size: 14pt
+  color: #ffb7b7
+
+.biglink:after
+  content: "  \2192"
+
+#body--dark--goto
+  text-align: center
+  width: 100%
+  position: absolute
+  bottom: 5vh
+
+#body--light
+  padding: 40px
+  line-height: 250%
+  text-align: center

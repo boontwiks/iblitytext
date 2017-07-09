@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{page.title}}</title>
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="styles/home.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts/home.js" ></script>
+	</head>
+	<body>
+		<header id="header" class="c-light">
+			<object id="header--logo" data="images/logo.svg" type="image/svg+xml">
+				<img src="images/logo.png" />
+			</object>
+			<span id="header--title", class="h1">{{page.title}}</span>
+		</header>
+
+		<div id="body">
+			<div id="body--dark" class="c-dark">
+				<div id="body--dark--about">
+					<span class="h2 sliding-text sl-static" id="body--dark--about--span-head">IBlity, the </span>
+					<span class="h2 sliding-text sl-dynamic" id="body--dark--about--span-middle">completely free</span>
+					<span class="h2 sliding-text sl-static" id="body--dark--about--span-tail"> IB textbook.</span>
+				</div>
+				<div id="body--dark--goto">
+					<a id="body--dark--goto--link" class="biglink">View the latest edition</a>
+				</div>
+			</div>
+			<div id="body--light" class="c-white">
+				<span>IBlity is currently in alpha. We are currently looking for contributers to build the world's first free textbook from scratch.</span>
+				<br><br>
+				<span class="h1">Why should I contribute?</span>
+				<!-- TODO: Sliding text: get feedback; improve your writing; learn together; earn CAS -->
+			</div>
+			<!-- TODO: FAQ -->
+		</div>
+
+	</body>
+</html>
