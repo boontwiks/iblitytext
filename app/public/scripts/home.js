@@ -1,5 +1,5 @@
 // IBlity, the ... IB textbook
-var about_texts = ['completely free', 'community-driven', 'open-source', 'up-to-date']
+var about_texts = ['completely free', 'community-driven', 'open-source', 'up-to-date', 'non-profit']
 var about_interval = 3000
 var about_index = 0
 

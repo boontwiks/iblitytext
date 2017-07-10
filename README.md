@@ -10,6 +10,9 @@ We're using tabs for indentation so everybode can set their preferred indentatio
 ### Design guides
 Check [the wiki](https://github.com/boontwiks/iblitytext/wiki/Design-Guide).
 
+## Intended Browser Support
+The site should work on IE9/10+ and all other modern browsers, except Opera Mini. There is no way we're making a site that runs on Opera Mini.
+
 ## How to clone
 Prequisites:
 You will need a stable (LTS) install of [node.js](https://nodejs.org/en/).

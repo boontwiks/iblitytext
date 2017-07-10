@@ -1,128 +1,151 @@
-$header-height: 55px
+$header-height: 40px
 $color-light: #4f7dc1
 $color-dark: #2a4670
 $color-highlight: #ffb7b7
 $body-dark-height: 25vh
 
 html
-  font-family: 'Open Sans', sans-serif
+	font-family: 'Open Sans', sans-serif
 
 html, body, header
-  padding: 0
-  margin: 0
-  min-width: 650px
+	padding: 0
+	margin: 0
+	min-width: 650px
 
 html, body
-  width: 100%
+	width: 100%
 html
-  height: 100%
+	height: 100%
 body
-  height: 90% // lame way to prevent unnecessary overflow
+	height: 90% // lame way to prevent unnecessary overflow
 
 h1, .h1
-  font-family: 'Merriweather', serif
-  font-size: 20pt
+	font-family: 'Merriweather', serif
+	font-size: 20pt
 
 h2, .h2
-  font-size: 24pt
+	font-size: 24pt
 
 .c-light
-  background-color: $color-light
-  color: white
+	background-color: $color-light
+	color: white
 
 .c-dark
-  background-color: $color-dark
-  color: white
+	background-color: $color-dark
+	color: white
 
 .c-white
-  background-color: white
-  color: #070714
+	background-color: white
+	color: #070714
 
 #header
-  padding: 5px
-  border-style: none none solid none
-  border-color: #acb0c4
-  border-width: 1px
-  box-shadow: 0 5px 10px 0px
-  z-index: 1
+	padding: 5px
+	border-style: none none solid none
+	border-color: #acb0c4
+	border-width: 1px
+	box-shadow: 0 5px 10px 0px
+	z-index: 1
+	vertical-align: middle
+	width: calc(100% - 10px)
+	a
+		position: relative
+		top: 2px // please don't ask why this is necessary
+		margin: 0 10px
 
 #header--logo
-  width: $header-height
-  height: $header-height
-  vertical-align: middle
+	width: $header-height
+	height: $header-height
+	vertical-align: middle
 
 #header--title
-  vertical-align: middle
-  margin-left: 10px
+	vertical-align: middle
+	margin-left: 10px
+	font-size: $header-height / 2
+	display: inline-block
+	width: calc(99% - 220px)
+
+.button
+	cursor: pointer
+
+.button.big
+		padding: 3px 12px
+		border: 1px solid $color-highlight
+		border-radius: 3px
+		background-color: $color-highlight
+		color: $color-dark
+.button.big:hover
+		color: $color-highlight
+		background-color: $color-dark
 
 #body // this is NOT the html body
-  height: 100%
-  width: 100%
+	height: 100%
+	width: 100%
 
 #body--dark
-  height: $body-dark-height
-  display: inline-block
-  width: 100%
-  position: relative
+	//height: $body-dark-height
+	display: inline-block
+	width: 100%
+	position: relative
+	text-align: center
 
 #body--dark--about
-  vertical-align: center
-  text-align: center
-  padding: 20px
-  margin-top: 6vh
+	vertical-align: center
+	text-align: center
+	padding: 20px
+	margin-top: 6vh
 
 // FIXME: This is not working at all.
 .sliding-text
-    transition: all .5s ease-in-out
+	transition: all .5s ease-in-out
 
 #body--dark--about--span-middle
-  color: $color-highlight
+	color: $color-highlight
 
 .biglink
-  cursor: pointer
-  font-size: 14pt
-  color: $color-highlight
-  text-decoration: none
+	cursor: pointer
+	font-size: 14pt
+	color: $color-highlight
+	text-decoration: none
 
 .biglink:after
-  content: "  \2192"
+	content: "	\2192"
 
 #body--dark--goto
-  text-align: center
-  width: 100%
-  position: absolute
-  bottom: 3vh
+	text-align: center
+	width: 100%
+	margin-top: 38pt
+	margin-bottom: 16pt
 
 #body--light
-  padding: 40px
-  line-height: 250%
-  text-align: center
+	padding: 40px
+	line-height: 250%
+	text-align: center
 
 #body--light--whycontribute-reasons, #body--light--faq
-  width: 70vw
-  max-width: 32cm // we're using cm here because this is not a technical thing but rather to make things easier on the eye, i.e. we want to define the real-world width
-  min-width: 543px // this on the other hand is a bit of both
-  text-align: center
-  line-height: 140%
-  margin: auto
-  h2, .h2
-    font-family: 'Open Sans', serif
-    font-size: 18pt
-    color: #2e2e70
-    display: inline-block
-    margin-bottom: 9pt
-    line-height: 120%
-  h3, .h3
-    font-family: 'Open Sans', serif
-    font-size: 12pt
-    color: #2e2e70
-    display: inline-block
-    margin-bottom: 6pt
-  td
-    padding: 15px 35px 25pt 35px
-    width: 35vw
-    max-width: 16cm
+	width: 70vw
+	max-width: 32cm // we're using cm here because this is not a technical thing but rather to make things easier on the eye, i.e. we want to define the real-world width
+	min-width: 543px // this on the other hand is a bit of both
+	text-align: center
+	line-height: 140%
+	margin: auto
+	h2, .h2
+		font-family: 'Open Sans', serif
+		font-size: 18pt
+		color: #2e2e70
+		display: inline-block
+		margin-bottom: 9pt
+		line-height: 120%
+	h3, .h3
+		font-family: 'Open Sans', serif
+		font-size: 12pt
+		color: #2e2e70
+		display: inline-block
+		margin-bottom: 6pt
+	td
+		padding: 15px 35px 25pt 35px
+		width: 35vw
+		max-width: 16cm
 
 #body--light--faq
-  margin-top: 20pt
-  font-size: 11pt
+	margin-top: 20pt
+	font-size: 11pt
