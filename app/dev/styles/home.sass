@@ -10,6 +10,7 @@ html
 html, body, header
   padding: 0
   margin: 0
+  min-width: 650px
 
 html, body
   width: 100%
@@ -35,7 +36,7 @@ h2, .h2
 
 .c-white
   background-color: white
-  color: #020204
+  color: #070714
 
 #header
   padding: 5px
@@ -98,8 +99,9 @@ h2, .h2
   text-align: center
 
 #body--light--whycontribute-reasons, #body--light--faq
-  width: 60vw
-  max-width: 25cm
+  width: 70vw
+  max-width: 32cm // we're using cm here because this is not a technical thing but rather to make things easier on the eye, i.e. we want to define the real-world width
+  min-width: 543px // this on the other hand is a bit of both
   text-align: center
   line-height: 140%
   margin: auto
@@ -117,7 +119,9 @@ h2, .h2
     display: inline-block
     margin-bottom: 6pt
   td
-    padding: 0 20px 16pt 20px
+    padding: 15px 35px 25pt 35px
+    width: 35vw
+    max-width: 16cm
 
 #body--light--faq
   margin-top: 20pt
