@@ -47,6 +47,7 @@ function compile_sass() {
 	}, (err, result) => {
 		if (err)
 			return console.error('Sass encountered an error:', err)
+		ensureDirectoryExists(path.join(__dirname, 'public/styles/home.css'))
 		fs.writeFile(path.join(__dirname, 'public/styles/home.css'), result.css, (err) => {
 			if (err)
 				return console.error('Error writing compiled css')
@@ -87,3 +88,13 @@ process.stdin.on('keypress', (chunk, key) => {
 		setTimeout(() => {process.stdout.write('\r     \r')}, 500) //fancy! we don't want to clog the console.
 	}
 })
+
+// Helper functions
+function ensureDirectoryExists(filePath) {
+  var dirname = path.dirname(filePath);
+  if (fs.existsSync(dirname)) {
+    return true;
+  }
+  ensureDirectoryExists(dirname);
+  fs.mkdirSync(dirname);
+}
